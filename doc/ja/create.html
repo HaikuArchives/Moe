@@ -1,0 +1,96 @@
+<!doctype html public "-//W3C//DTD HTML 3.2//EN" "http://www.w3.org/TR/REC-html32#dtd">
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=ISO-2022-JP"> 
+<title>Moe User's Manual Create Your Own Mascot</title>
+</head>
+<body bgcolor="white" text="black">
+
+<div align="right">
+<h1><font color="orange">マスコットを作る</font></h1>
+</div>
+
+<a name="image"></a>
+<h2><img align="absmiddle" src="../img/b01s_y.gif">イメージを読む</h2>
+
+<p>
+マスコットにしたい画像ファイルをMoeのバイナリに
+ドラッグ&ドロップして開きます。
+画像の左上の色が自動的に透明色として扱われます。
+また、αチャネルも反映されるので、
+半透明の画像を扱う事も出来ます。
+</p>
+
+<a name="drag"></a>
+<h2><img align="absmiddle" src="../img/b01s_g.gif">位置を決める</h2>
+
+<p>
+画像をドラッグして、
+ウィンドウ上で配置したい位置を決めます。
+</p>
+
+<p>
+ウィンドウの右側や左側の辺を基準にマスコットを配置したい場合は、
+<kbd>Alt+Shift+Ctrl</kbd>を押しながらクリックをして
+拡張メニューを表示し、
+&quot;Side&quot;から基準となる辺を選択します。
+</p>
+
+<a name="lock"></a>
+<h2><img align="absmiddle" src="../img/b01s_sb.gif">ロックする</h2>
+
+<p>
+Y方向をロックして位置を固定します。
+必要があればX方向もロックしてやります。
+</p>
+
+<a name="anime"></a>
+<h2><img align="absmiddle" src="../img/b01s_pp.gif">アニメを設定する</h2>
+
+<p>
+Moeはマスコットにまばたきアニメーションをさせる事ができます。
+</p>
+
+<p>
+例えばmoe.pngというマスコットファイルにまばたきアニメーションを
+登録したい場合にはコマンドラインから次のように入力します。
+目を閉じかけのmoe2.png、目を完全に閉じたmoe3.pngの2つのファイルを
+アニメーション用に用意し、
+moe.png -&gt; moe2.png -&gt; moe3.png -&gt; moe2.png -&gt; (moe.png)
+という順番にアニメーションさせます。
+1フレーム毎の表示時間は8msを指定します。
+</p>
+
+<font color="blue">
+Moe --add-anime=wink --wait=8 moe.png moe2.png moe3.png moe2.png
+</font>
+
+<p>
+アニメーションのフレームとして指定するファイルは、
+マスコットファイルと同じサイズで、アニメーションする部分だけを
+書換えた画像を用意して下さい。
+Moeが自動的に必要な部分だけを切り出して登録します。
+</p>
+
+<p>
+アニメーションパターンは、
+<b>MOE:ANIME:&lt;アニメーション名&gt;</b>という名前で
+マスコットファイルの属性として書き込まれます。
+</p>
+
+<a name="archive"></a>
+<h2><img align="absmiddle" src="../img/b01s_p.gif">アーカイブする</h2>
+
+<p>
+ZipOMaticなどを使って、画像ファイルをアーカイブしてやります。
+マスコットの位置やアニメーション情報はBFSの属性として保存されるので、
+配布時はzip形式にしないとこれらの情報が保持されません。
+</p>
+
+</body>
+</html>
+
+
+
+
+

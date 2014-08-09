@@ -1,0 +1,94 @@
+<!doctype html public "-//W3C//DTD HTML 3.2//EN" "http://www.w3.org/TR/REC-html32#dtd">
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-2"> 
+<title>Moe User's Manual Create Your Own Mascot</title>
+</head>
+<body bgcolor="white" text="black">
+
+<div align="right">
+<h1><font color="orange">Create Your Own Mascot</font></h1>
+</div>
+
+<a name="image"></a>
+<h2><img align="absmiddle" src="../img/b01s_y.gif">Read Image</h2>
+
+<p>
+Drag and Drop you prefered image file to Moe binary,
+the image file is opened as mascot.
+Left top most pixel of image file is treated as transparent color.
+Moreover Moe consider alpha channel of image file.
+So you can treat translucent image.
+</p>
+
+<a name="drag"></a>
+<h2><img align="absmiddle" src="../img/b01s_g.gif">Decide Position</h2>
+
+<p>
+Drag the mascot,
+and locate prefred position on window.
+</p>
+
+<p>
+When you want to locate mascot based for left or right side,
+click mascot with holding <kbd>Alt+Shift+Ctrl</kbd>,
+select your prefered side from &quot;Side&quot;.
+</p>
+
+<a name="lock"></a>
+<h2><img align="absmiddle" src="../img/b01s_sb.gif">Lock Position</h2>
+
+<p>
+Lock Y position.
+If needed, also Lock X position.
+</p>
+
+<a name="anime"></a>
+<h2><img align="absmiddle" src="../img/b01s_pp.gif">Setup Animation</h2>
+
+<p>
+Moe has a capability to add wink animation to the mascot.
+</p>
+
+<p>
+For example, 
+when you want to add wink animation to an image file &quot;moe.png&quot;,
+Prepare two image file &quot;moe2.png&quot;(eye half closed),
+&quot;moe3.png&quot;(eye closed) for animation pattern,
+setup animation orderd 
+moe.png -&gt; moe2.png -&gt; moe3.png -&gt; moe2.png -&gt; (moe.png).
+Set every frame wait to 8ms.
+Type below on Terminal.
+</p>
+
+<font color="blue">
+Moe --add-anime=wink --wait=8 moe.png moe2.png moe3.png moe2.png
+</font>
+
+<p>
+Animation image file must have same size with mascot image file.
+Moe automatically detect animation region.
+</p>
+
+<p>
+Animation pattern is registerd with name
+<b>MOE:ANIME:&lt;Animation Name&gt;</b>
+as mascot file's attribute.
+</p>
+
+<a name="archive"></a>
+<h2><img align="absmiddle" src="../img/b01s_p.gif">Archive</h2>
+
+<p>
+Archive mascot file with ZipOMatic, so on.
+Mascot's position, animation etc. is saved as BFS attribute,
+you must archive these attributes with zip format.
+</p>
+
+</body>
+</html>
+
+
+
+
+

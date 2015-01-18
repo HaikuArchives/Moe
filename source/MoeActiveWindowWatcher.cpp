@@ -207,6 +207,9 @@ struct window_info {
   char     name[1];
 };
 
+#ifndef _IMPEXP_BE
+#define _IMPEXP_BE
+#endif
 
 _IMPEXP_BE window_info  *get_window_info(int32 a_token);
 _IMPEXP_BE int32        *get_token_list(team_id app, int32 *count);
@@ -257,7 +260,12 @@ get_active_window(void)
 static status_t
 get_window_state(window_info *winInfo, bool *active, BRect *frame)
 {
+#ifndef __HAIKU__
   BMessenger win(winInfo->team, winInfo->client_port, winInfo->client_token, false);
+#else
+  BMessenger win;
+  win._SetTo(winInfo->team, winInfo->client_port, winInfo->client_token);
+#endif
   BMessage msg(B_GET_PROPERTY), reply;
 
   msg.AddSpecifier("Active");

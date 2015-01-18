@@ -44,6 +44,7 @@ public:
   static float Rand(void);
 };
 
+#ifndef __HAIKU__
 
 static inline bool
 operator==(const rgb_color c1, const rgb_color c2)
@@ -60,6 +61,7 @@ operator!=(const rgb_color c1, const rgb_color c2)
     *reinterpret_cast<const uint32*>(&c2);
 }
 
+#endif
 
 static inline rgb_color *
 pixel_at(const BBitmap *bitmap, int32 x, int32 y)

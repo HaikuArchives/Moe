@@ -108,6 +108,8 @@ MoeAnime::Archive(BMessage *archive, bool deep) const
 		       buf2.BufferLength(),
 		       false);
     }
+
+    return B_OK;
 }
 
 

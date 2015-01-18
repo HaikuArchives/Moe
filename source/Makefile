@@ -47,7 +47,7 @@ SRCS=	MoeForwardFilter.cpp \
 
 #	specify the resource files to use
 #	full path or a relative path to the resource file can be used.
-RSRCS= Moe.rsrc
+RDEFS= Moe.rdef
 
 # @<-src@ 
 #%}
@@ -64,12 +64,7 @@ RSRCS= Moe.rsrc
 #		naming scheme you need to specify the path to the library
 #		and it's name
 #		library: my_lib.a entry: my_lib.a or path/my_lib.a
-MACHINE=$(shell uname -m)
-ifeq ($(MACHINE), BePC)
 LIBS= be translation z
-else
-LIBS= be translation z
-endif
 
 #	specify additional paths to directories following the standard
 #	libXXX.so or libXXX.a naming scheme.  You can specify full paths
@@ -122,54 +117,7 @@ COMPILER_FLAGS =
 #	specify additional linker flags
 LINKER_FLAGS =
 
-
-## include the makefile-engine
-include /boot/develop/etc/makefile-engine
-
-## make backup
-cin:
-	ci -l Makefile *.cpp *.h
-
-## make distribution
-
-DIST_OBJ_GENERAL = 1stReadMe.* sample/moe.png GPL doc
-DIST_OBJ_X86_ONLY = obj.x86/$(NAME)
-DIST_OBJ_PPC_ONLY = obj.ppc/$(NAME)
-DIST_OBJ_SRC_ONLY = Makefile $(RSRCS) *.cpp *.h
-
-DIST_PREFIX = $(NAME)$(VER)
-DIST_X86 = $(DIST_PREFIX)-x86.zip
-DIST_PPC = $(DIST_PREFIX)-ppc.zip
-DIST_SRC = $(DIST_PREFIX)-src.zip
-ZIP = zip
-
-DIST_OBJ_X86 = $(addprefix $(NAME)/, $(DIST_OBJ_GENERAL) $(DIST_OBJ_X86_ONLY))
-DIST_OBJ_PPC = $(addprefix $(NAME)/, $(DIST_OBJ_GENERAL) $(DIST_OBJ_PPC_ONLY))
-DIST_OBJ_SRC = $(addprefix $(NAME)/, $(DIST_OBJ_GENERAL) $(DIST_OBJ_SRC_ONLY))
-
-
-dist: dist_ppc dist_x86 dist_src
-
-DO_LINK   := [ ! -e $(NAME) ] && ln -s . $(NAME)
-DO_UNLINK := [ -e $(NAME) ] && rm $(NAME)
-
-dist_x86:
-	strip obj.x86/$(NAME)
-	$(DO_RSRCS)
-	$(MIMESET) -f obj.x86/$(NAME)	
-	$(DO_LINK)
-	$(ZIP) -ury $(DIST_X86) $(DIST_OBJ_X86)
-	$(DO_UNLINK)
-
-dist_ppc:
-	$(DO_LINK)
-	$(ZIP) -ury $(DIST_PPC) $(DIST_OBJ_PPC)
-	$(DO_UNLINK)
-
-dist_src:
-	$(DO_LINK)
-	$(ZIP) -ury $(DIST_SRC) $(DIST_OBJ_SRC)
-	$(DO_UNLINK)
-
-
-
+## Include the Makefile-Engine
+DEVEL_DIRECTORY := \
+	$(shell findpaths -r "makefile_engine" B_FIND_PATH_DEVELOP_DIRECTORY)
+include $(DEVEL_DIRECTORY)/etc/makefile-engine

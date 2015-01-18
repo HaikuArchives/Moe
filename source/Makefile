@@ -47,7 +47,7 @@ SRCS=	MoeForwardFilter.cpp \
 
 #	specify the resource files to use
 #	full path or a relative path to the resource file can be used.
-RSRCS= Moe.rsrc
+RDEFS= Moe.rdef
 
 # @<-src@ 
 #%}
@@ -64,12 +64,7 @@ RSRCS= Moe.rsrc
 #		naming scheme you need to specify the path to the library
 #		and it's name
 #		library: my_lib.a entry: my_lib.a or path/my_lib.a
-MACHINE=$(shell uname -m)
-ifeq ($(MACHINE), BePC)
 LIBS= be translation z
-else
-LIBS= be translation z
-endif
 
 #	specify additional paths to directories following the standard
 #	libXXX.so or libXXX.a naming scheme.  You can specify full paths

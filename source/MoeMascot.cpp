@@ -25,6 +25,7 @@
 
 
 #include <algorithm>
+#include <cmath>
 #include <fs_attr.h>
 #include <Invoker.h>
 #include <Alert.h>
@@ -398,7 +399,7 @@ MoeMascot::MoveToPrefered(void)
   MoePointTransformer pointAccessor(&point, mSide);
   pointAccessor.X() = 
     int(targetAccessor.Left() +
-	mXRate * max(0.0f, targetAccessor.Width() - frameAccessor.Width()));
+	mXRate * std::max(0.0f, targetAccessor.Width() - frameAccessor.Width()));
   pointAccessor.Y() = 
     int(targetAccessor.Top() - 
 	targetAccessor.YSign() * ((targetAccessor.YSign() > 0) - mYRate) *

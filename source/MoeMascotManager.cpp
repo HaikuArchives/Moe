@@ -166,7 +166,7 @@ MoeMascotManager::Open(const entry_ref &entry)
 
 
   while (this->SumSlices() + surface->CountRects() > 
-	 max(mMaxWindowNum, this->CountMascots() + 1))
+	 std::max(mMaxWindowNum, this->CountMascots() + 1))
     {
       this->CellReduction();
       surface->SetCellSize(mCellSize);

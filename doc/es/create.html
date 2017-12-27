@@ -1,0 +1,94 @@
+<!doctype html public "-//W3C//DTD HTML 3.2//EN" "http://www.w3.org/TR/REC-html32#dtd">
+<html lang="es">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1"> 
+<title>Manual de usuario de Moe: Crea tu propia mascota</title>
+</head>
+<body bgcolor="white" text="black">
+
+<div align="right">
+<h1><font color="orange">Crea tu propia mascota</font></h1>
+</div>
+
+<a name="image"></a>
+<h2><img align="absmiddle" src="../img/b01s_y.gif">Leer imagen</h2>
+
+<p>
+Arrastra y suelta tu imagen preferida sobre el archivo binario de Moe,
+y a continuaci&oacute;n la imagen se abrir&aacute; como una mascota.
+El pixel ubicado en el extremo superior izquierdo de la imagen es tratado como el color transparente.
+Adem&aacute; Moe lo considera el canal alfa de la imagen.
+Por lo tanto, puedes manipular im&aacute;genes transl&uacute;cidas.
+</p>
+
+<a name="drag"></a>
+<h2><img align="absmiddle" src="../img/b01s_g.gif">Elegir posici&oacute;n</h2>
+
+<p>
+Arrastra la mascota
+y ub&iacute;cala en la posici&oacute;n preferida sobre la ventana.
+</p>
+
+<p>
+Si deseas ubicar la mascota sobre el lado derecho o izquierdo,
+haz clic sobre la mascota manteniendo presionadas las teclas <kbd>Alt+Ma&uacute;s+Ctrl</kbd>
+y selecciona la ubicaci&oacute;n preferida desde &quot;Lado&quot;.
+</p>
+
+<a name="lock"></a>
+<h2><img align="absmiddle" src="../img/b01s_sb.gif">Bloquear posici&oacute;n</h2>
+
+<p>
+Bloquear posici&oacute;n Y (vertical).
+Si es necesario, bloquea tambi&eacute;n la posici&oacute;n X (horizontal).
+</p>
+
+<a name="anime"></a>
+<h2><img align="absmiddle" src="../img/b01s_pp.gif">Configurar animaci&oacute;n</h2>
+
+<p>
+Moe puede anadir una animación de gui&ntilde; o pesta&ntilde;eo a la mascota.
+</p>
+
+<p>
+Por ejemplo, 
+si deseas a&ntilde;adir una animaci&oacute; de pesta&ntilde;eo a un archivo de imagen "moe.png",
+prepara dos im&aacute;genes quot;moe2.png&quot; (ojos medio cerrados) y 
+&quot;moe3.png&quot; (ojos cerrados) para un patr&oacute;n de animaci&oacute;n,
+configura el orden de animaci&oacute;n
+moe.png -&gt; moe2.png -&gt; moe3.png -&gt; moe2.png -&gt; (moe.png).
+Establece el tiempo de espera de cada cuadeo en 8 milisegundos, 
+y escribe abajo en la Terminal:
+</p>
+
+<font color="blue">
+Moe --add-anime=wink --wait=8 moe.png moe2.png moe3.png moe2.png
+</font>
+
+<p>
+El archivo de imagen de animaci&oacute;n debe tener las mismas dimensiones de el archivo de imagen de la mascota.
+Moe detecta autom&aacute;ticamente las regiones de animaci&oacute;n.
+</p>
+
+<p>
+El patr&oacute;n de animaci&oacute;n se registra con el nombre
+<b>MOE:ANIME:&lt;Nombre de la animaci&oacute;n&gt;</b>
+como un atributo del archivo de mascota.
+</p>
+
+<a name="archive"></a>
+<h2><img align="absmiddle" src="../img/b01s_p.gif">Archivar</h2>
+
+<p>
+Archiva el archivo de mascota con ZipOMatic, as&iacute;
+la posici&oacute;n, animaci&oacute;n, etc. de la mascota es guardada como un atributo del archivo en el sistema de archivos BeFS,
+y debes archivar estos atributos con el formato zip.
+</p>
+
+</body>
+</html>
+
+
+
+
+

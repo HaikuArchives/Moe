@@ -1,3 +1,7 @@
-Moe is a program to stay cute mascot on active window. How about mind cooler for your desktop?
+# Moe
 
-Check the [HTML documentation](./doc/en/index.html).
+![Moe screenshot](Moe.png "Moe")
+
+Moe is a program which attaches a character to the active window.
+
+[HTML documentation](https://htmlpreview.github.io/?https://github.com/HaikuArchives/Moe/blob/master/doc/en/index.html)

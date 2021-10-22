@@ -32,10 +32,13 @@
 #include <Directory.h>
 #include <Invoker.h>
 #include <Alert.h>
+#include <Catalog.h>
 #include "MoeDefs.h"
 #include "MoeWindow.h"
 #include "MoeProperty.h"
 
+#undef B_TRANSLATION_CONTEXT
+#define B_TRANSLATION_CONTEXT "Property"
 
 #define IGNORE_APP       "ignore_app"
 #define POLLING_INTERVAL "polling_interval"
@@ -339,17 +342,19 @@ MoeProperty::MessageReceived(BMessage *msg)
 	BString buf;
 
 	msg->FindString("name", &name);
-	buf << "Really Ignore \"" << name << "\"?";
+	//buf << "Really Ignore \"" << name << "\"?";
+	buf << B_TRANSLATE("Really Ignore \"%name%\"?");
+	buf.ReplaceAll("%name%", name);
 
 	BMessage *execMsg = new BMessage(*msg);
 	execMsg->what = MOE_ADD_IGNORE_APP;
 
 	BInvoker *invoker = new BInvoker(execMsg, this);
 
-	BAlert *alert = new BAlert("Ignore This App",
+	BAlert *alert = new BAlert(B_TRANSLATE("Ignore This App"),
 				   buf.String(),
-				   "Ok",
-				   "Cancel",
+				   B_TRANSLATE("Ok"),
+				   B_TRANSLATE("Cancel"),
 				   NULL,
 				   B_WIDTH_AS_USUAL,
 				   B_WARNING_ALERT);
@@ -381,17 +386,19 @@ MoeProperty::MessageReceived(BMessage *msg)
 	BString buf;
 
 	msg->FindString("name", &name);
-	buf << "Avoid \"" << name << "\" from Ignore List?";
+	//buf << "Avoid \"" << name << "\" from Ignore List?";
+	buf << B_TRANSLATE("Avoid \"%name%\" from Ignore List?");
+	buf.ReplaceAll("%name%", name);
 
 	BMessage *execMsg = new BMessage(*msg);
 	execMsg->what = MOE_REMOVE_IGNORE_APP;
 
 	BInvoker *invoker = new BInvoker(execMsg, this);
 
-	BAlert *alert = new BAlert("Ignore This App",
+	BAlert *alert = new BAlert(B_TRANSLATE("Ignore This App"),
 				   buf.String(),
-				   "Ok",
-				   "Cancel",
+				   B_TRANSLATE("Ok"),
+				   B_TRANSLATE("Cancel"),
 				   NULL,
 				   B_WIDTH_AS_USUAL,
 				   B_WARNING_ALERT);

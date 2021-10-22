@@ -1,0 +1,39 @@
+1	English	application/x-vnd.Kamnagi.Moe	438676676
+Redraw	MascotMenu		Redraw
+Side	MascotMenu		Side
+Ok	Property		Ok
+Cancel	Property		Cancel
+Show Only on	MascotMenu		Show Only on
+About	Application		About
+Size	MascotMenu		Size
+This Window of This Application	MascotMenu		This Window of This Application
+Lock X	MascotMenu		Lock X
+Slowest	MascotMenu		Slowest
+Avoid from Ignore List	MascotMenu		Avoid from Ignore List
+unknown option.\n\n	Command line strings		unknown option.\n\n
+Ignore This App	MascotMenu		Ignore This App
+Ignore This App	Property		Ignore This App
+right	MascotMenu		right
+About	MascotMenu		About
+bottom	MascotMenu		bottom
+Usage: Moe [options] [files]\nOptions: [default in brackets after descriptions]\nConfiguration:\n  --help                print this message\nAnimation:\n  --add-anime=ANIME     add anime named ANIME to primary image file\n  --delete-anime=ANIME  delete anime named ANIME from mascot files\n  --wait=WAIT           set anime wait to WAIT\n                        [10]\nFiles:\n  --info                show mascot file information\n\n	Command line strings		Usage: Moe [options] [files]\nOptions: [default in brackets after descriptions]\nConfiguration:\n  --help                print this message\nAnimation:\n  --add-anime=ANIME     add anime named ANIME to primary image file\n  --delete-anime=ANIME  delete anime named ANIME from mascot files\n  --wait=WAIT           set anime wait to WAIT\n                        [10]\nFiles:\n  --info                show mascot file information\n\n
+overlapping mode specific options.\n\n	Command line strings		overlapping mode specific options.\n\n
+Wink	MascotMenu		Wink
+Close	MascotMenu		Close
+Polling	MascotMenu		Polling
+Lock Y	MascotMenu		Lock Y
+Quit	MascotMenu		Quit
+Very Slow	MascotMenu		Very Slow
+Really Ignore \"%name%\"?	Property		Really Ignore \"%name%\"?
+Slow	MascotMenu		Slow
+Show Only on \"%curappname%\"?	MascotMenu		Show Only on \"%curappname%\"?
+top	MascotMenu		top
+Lock	MascotMenu	Text when Y is locked.	Lock
+Avoid \"%name%\" from Ignore List?	Property		Avoid \"%name%\" from Ignore List?
+This Application	MascotMenu		This Application
+Fast	MascotMenu		Fast
+left	MascotMenu		left
+Ok	Application		Ok
+Fastest	MascotMenu		Fastest
+Debug Frame Visible	MascotMenu		Debug Frame Visible
+Show Only on \"%curwin%\" of \"%curappname%\"?	MascotMenu		Show Only on \"%curwin%\" of \"%curappname%\"?

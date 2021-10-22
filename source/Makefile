@@ -15,6 +15,9 @@ NAME= Moe
 #	DRIVER: Kernel Driver
 TYPE= APP
 
+# Application's MIME signature. Required to use localization.
+APP_MIME_SIG = application/x-vnd.Kamnagi.Moe
+
 #	add support for new Pe and Eddie features
 #	to fill in generic makefile
 #%{
@@ -64,7 +67,7 @@ RDEFS= Moe.rdef
 #		naming scheme you need to specify the path to the library
 #		and it's name
 #		library: my_lib.a entry: my_lib.a or path/my_lib.a
-LIBS= be translation z $(STDCPPLIBS)
+LIBS= be translation z localestub $(STDCPPLIBS)
 
 #	specify additional paths to directories following the standard
 #	libXXX.so or libXXX.a naming scheme.  You can specify full paths
@@ -87,6 +90,13 @@ LOCAL_INCLUDE_PATHS =
 #	specify the level of optimization that you desire
 #	NONE, SOME, FULL
 OPTIMIZE= FULL
+
+#	Specify the codes for languages you are going to support in this
+#	application. The default "en" one must be provided too. "make catkeys"
+#	will recreate only the "locales/en.catkeys" file. Use it as a template
+#	for creating catkeys for other languages. All localization files must be
+#	placed in the "locales" subdirectory.
+LOCALES = en es
 
 #	specify any preprocessor symbols to be defined.  The symbols will not
 #	have their values set automatically; you must supply the value (if any)

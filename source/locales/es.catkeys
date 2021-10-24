@@ -1,22 +1,27 @@
-1	Spanish	application/x-vnd.Kamnagi.Moe	2820497071
+1	Spanish	application/x-vnd.Kamnagi.Moe	483032066
 Redraw	MascotMenu		Redibujado
 Side	MascotMenu		Ubicación
-Ok	Property		Aceptar
 Cancel	Property		Cancelar
-Show Only on	MascotMenu		Mostrar solamente en
+Really ignore \"%name%\"?	Property		¿Desea ignorar \"%name%\"?
+Show only on \"%curappname%\"?	MascotMenu		¿Mostrar solamente en \"%curappname%\"?
+Set preferred window	Mascot		Establecer ventana preferida
+Remove from ignore list	MascotMenu		Quitar de la lista de ignorados
 About	Application		Acerca de
+Set preferred app	Mascot		Establecer aplicación preferida
 Size	MascotMenu		Tamaño
-This Window of This Application	MascotMenu		Esta ventana de esta aplicación
+This application	MascotMenu		Esta aplicación
 Lock X	MascotMenu		Bloquear X
+OK	Mascot		Aceptar
 Slowest	MascotMenu		Muy lento
-Avoid from Ignore List	MascotMenu		Quitar de la lista de ignorados
 unknown option.\n\n	Command line strings		opción desconocida.\n\n
-Ignore This App	MascotMenu		Ignorar esta aplicación
-Ignore This App	MascotMenu		Ignorar esta aplicación
+Ignore this app	MascotMenu		Ignorar esta aplicación
+OK	Application		Aceptar
+Ignore this app	Property		Ignorar esta aplicación
 right	MascotMenu		derecha
 About	MascotMenu		Acerca de
 bottom	MascotMenu		abajo
 Usage: Moe [options] [files]\nOptions: [default in brackets after descriptions]\nConfiguration:\n  --help                print this message\nAnimation:\n  --add-anime=ANIME     add anime named ANIME to primary image file\n  --delete-anime=ANIME  delete anime named ANIME from mascot files\n  --wait=WAIT           set anime wait to WAIT\n                        [10]\nFiles:\n  --info                show mascot file information\n\n	Command line strings		Uso: Moe [opciones] [archivos]\nOpciones: [los valores predeterminados están entre corchetes después de las descripciones]\nConfiguración:\n  --help                muestra este mensaje\nAnimacióon:\n  --add-anime=ANIME     añade un anime de nombre ANIME al archivo de imagen primario\n  --delete-anime=ANIME  borra un anime de nombre ANIME de los archivos de mascota\n  --wait=WAIT           establece la espera del anime a WAIT\n                        [10]\nArchivos:\n  --info                muestra información del archivo de mascota\n\n
+Show only on \"%curwin%\" of \"%curappname%\"?	MascotMenu		¿Mostrar solamente en la ventana \"%curwin%\" de \"%curappname%\"?
 overlapping mode specific options.\n\n	Command line strings		opciones específicas del modo superpuesto.\n\n
 Wink	MascotMenu		Pestañeo
 Close	MascotMenu		Cerrar
@@ -24,16 +29,15 @@ Polling	MascotMenu		Sondeo
 Lock Y	MascotMenu		Bloquear Y
 Quit	MascotMenu		Salir
 Very Slow	MascotMenu		Lento
-Really Ignore \"%name%\"?	Property		¿Desea ignorar \"%name%\"?
+OK	Property		Aceptar
+Show only on	MascotMenu		Mostrar solamente en
 Slow	MascotMenu		Normal
-Show Only on \"%curappname%\"?	MascotMenu		¿Mostrar solamente en \"%curappname%\"?
 top	MascotMenu		arriba
 Lock	MascotMenu	Text when Y is locked.	Bloquear
-Avoid \"%name%\" from Ignore List?	Property		¿Quitar a \"%name%\" de la lista de ignorados?
-This Application	MascotMenu		Esta aplicación
+This window of this application	MascotMenu		Esta ventana de esta aplicación
+Avoid \"%name%\" from ignore list?	Property		¿Quitar \"%name%\" de la lista de ignorados?
 Fast	MascotMenu		Rápido
+Cancel	Mascot		Cancelar
 left	MascotMenu		izquierda
-Ok	Application		Aceptar
 Fastest	MascotMenu		Muy rápido
-Debug Frame Visible	MascotMenu		Mostrar marco de depuración
-Show Only on \"%curwin%\" of \"%curappname%\"?	MascotMenu		¿Mostrar solamente en la ventana \"%curwin%\" de \"%curappname%\"?
+Debug frame visible	MascotMenu		Mostrar marco de depuración

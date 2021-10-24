@@ -266,7 +266,7 @@ MoeApplication::AboutRequested(void)
 
   BAlert *alert = new BAlert(B_TRANSLATE("About"),
 			     buf.String(),
-			     B_TRANSLATE("Ok"));
+			     B_TRANSLATE("OK"));
   alert->SetFlags(alert->Flags() | B_AVOID_FOCUS);
   alert->Go(NULL);
 }

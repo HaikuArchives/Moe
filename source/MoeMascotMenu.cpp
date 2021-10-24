@@ -152,7 +152,7 @@ MoeMascotMenu::InitItems(MoeMascot *target, bool advanced)
     {
       watcher->Lock();
 
-      menu = new BMenu(B_TRANSLATE("Show Only on"));
+      menu = new BMenu(B_TRANSLATE("Show only on"));
 
       if (target->PrefWin().Length() == 0)
 	{
@@ -160,18 +160,18 @@ MoeMascotMenu::InitItems(MoeMascot *target, bool advanced)
 	    {
 	      BString label;
 	      //label << "Show Only on \"" << watcher->CurrentAppName() << "\"?";
-	      label << B_TRANSLATE("Show Only on \"%curappname%\"?");
+	      label << B_TRANSLATE("Show only on \"%curappname%\"?");
 	      label.ReplaceAll("%curappname%", watcher->CurrentAppName());
 	      msg = new BMessage(MOE_SET_PREF_APP_REQUESTED);
 	      msg->AddString("data", watcher->CurrentApp());
 	      msg->AddString("label", label);
-	      item = new BMenuItem(B_TRANSLATE("This Application"), msg);
+	      item = new BMenuItem(B_TRANSLATE("This application"), msg);
 	    }
 	  else
 	    {
 	      msg = new BMessage(MOE_SET_PREF_APP);
 	      msg->AddString("data", "");
-	      item = new BMenuItem(B_TRANSLATE("This Application"), msg);
+	      item = new BMenuItem(B_TRANSLATE("This application"), msg);
 	      item->SetMarked(true);
 	    }
 	  item->SetTarget(target);
@@ -183,21 +183,21 @@ MoeMascotMenu::InitItems(MoeMascot *target, bool advanced)
 	  BString label;
 	  //label << "Show Only on \"" << watcher->CurrentWin() 
 		//<< "\" of \"" << watcher->CurrentAppName() << "\"?";
-	  label << B_TRANSLATE("Show Only on \"%curwin%\" of \"%curappname%\"?");
+	  label << B_TRANSLATE("Show only on \"%curwin%\" of \"%curappname%\"?");
 	  label.ReplaceAll("%curwin%", watcher->CurrentWin());
 	  label.ReplaceAll("%curappname%", watcher->CurrentAppName());
 	  msg = new BMessage(MOE_SET_PREF_APP_WIN_REQUESTED);
 	  msg->AddString("data", watcher->CurrentApp());
 	  msg->AddString("data", watcher->CurrentWin());
 	  msg->AddString("label", label);
-	  item = new BMenuItem(B_TRANSLATE("This Window of This Application"), msg);
+	  item = new BMenuItem(B_TRANSLATE("This window of this application"), msg);
 	}
       else
 	{
 	  msg = new BMessage(MOE_SET_PREF_APP_WIN);
 	  msg->AddString("data", "");
 	  msg->AddString("data", "");
-	  item = new BMenuItem(B_TRANSLATE("This Window of This Application"), msg);
+	  item = new BMenuItem(B_TRANSLATE("This window of this application"), msg);
 	  item->SetMarked(true);
 	}
       item->SetTarget(target);
@@ -265,7 +265,7 @@ MoeMascotMenu::InitItems(MoeMascot *target, bool advanced)
   msg->AddString("name", watcher->CurrentAppName());
   msg->AddString("signature", watcher->CurrentApp());
   watcher->Unlock();
-  item = new BMenuItem(B_TRANSLATE("Ignore This App"), msg);
+  item = new BMenuItem(B_TRANSLATE("Ignore this app"), msg);
   item->SetTarget(property);
   this->AddItem(item);
 
@@ -276,7 +276,7 @@ MoeMascotMenu::InitItems(MoeMascot *target, bool advanced)
 
       property->Lock();
 
-      menu = new BMenu(B_TRANSLATE("Avoid from Ignore List"));
+      menu = new BMenu(B_TRANSLATE("Remove from ignore list"));
 
       for (i = 1; i < property->CountIgnoreApps(); i++)
 	{
@@ -305,7 +305,7 @@ MoeMascotMenu::InitItems(MoeMascot *target, bool advanced)
     {
       msg = new BMessage(MOE_SET_DEBUG_FRAME_VISIBLE);
       msg->AddBool("data", ! property->IsDebugFrameVisible());
-      item = new BMenuItem(B_TRANSLATE("Debug Frame Visible"), msg);
+      item = new BMenuItem(B_TRANSLATE("Debug frame visible"), msg);
       item->SetMarked(property->IsDebugFrameVisible());
       item->SetTarget(property);
       this->AddItem(item);

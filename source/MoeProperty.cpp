@@ -343,7 +343,7 @@ MoeProperty::MessageReceived(BMessage *msg)
 
 	msg->FindString("name", &name);
 	//buf << "Really Ignore \"" << name << "\"?";
-	buf << B_TRANSLATE("Really Ignore \"%name%\"?");
+	buf << B_TRANSLATE("Really ignore \"%name%\"?");
 	buf.ReplaceAll("%name%", name);
 
 	BMessage *execMsg = new BMessage(*msg);
@@ -351,9 +351,9 @@ MoeProperty::MessageReceived(BMessage *msg)
 
 	BInvoker *invoker = new BInvoker(execMsg, this);
 
-	BAlert *alert = new BAlert(B_TRANSLATE("Ignore This App"),
+	BAlert *alert = new BAlert(B_TRANSLATE("Ignore this app"),
 				   buf.String(),
-				   B_TRANSLATE("Ok"),
+				   B_TRANSLATE("OK"),
 				   B_TRANSLATE("Cancel"),
 				   NULL,
 				   B_WIDTH_AS_USUAL,
@@ -387,7 +387,7 @@ MoeProperty::MessageReceived(BMessage *msg)
 
 	msg->FindString("name", &name);
 	//buf << "Avoid \"" << name << "\" from Ignore List?";
-	buf << B_TRANSLATE("Avoid \"%name%\" from Ignore List?");
+	buf << B_TRANSLATE("Avoid \"%name%\" from ignore list?");
 	buf.ReplaceAll("%name%", name);
 
 	BMessage *execMsg = new BMessage(*msg);
@@ -395,9 +395,9 @@ MoeProperty::MessageReceived(BMessage *msg)
 
 	BInvoker *invoker = new BInvoker(execMsg, this);
 
-	BAlert *alert = new BAlert(B_TRANSLATE("Ignore This App"),
+	BAlert *alert = new BAlert(B_TRANSLATE("Ignore this app"),
 				   buf.String(),
-				   B_TRANSLATE("Ok"),
+				   B_TRANSLATE("OK"),
 				   B_TRANSLATE("Cancel"),
 				   NULL,
 				   B_WIDTH_AS_USUAL,

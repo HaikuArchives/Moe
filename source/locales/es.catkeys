@@ -1,0 +1,46 @@
+1	English	application/x-vnd.Kamnagi.Moe	2411587421
+Redraw	MascotMenu		Redibujado
+Side	MascotMenu		Ubicación
+Cancel	Property		Cancelar
+Really ignore \"%name%\"?	Property		¿Desea ignorar \"%name%\"?
+Show only on \"%curappname%\"?	MascotMenu		¿Mostrar solamente en \"%curappname%\"?
+Set preferred window	Mascot		Establecer ventana preferida
+Remove from ignore list	MascotMenu		Quitar de la lista de ignorados
+Set preferred app	Mascot		Establecer aplicación preferida
+Size	MascotMenu		Tamaño
+Moe	System name		Moe
+This application	MascotMenu		Esta aplicación
+Project Be Moe.	Application About dialog box		Proyecto Be Moe.
+Lock X	MascotMenu		Bloquear X
+Yu-Ki (illustration)	Application About dialog box		Yu-Ki (ilustración)
+OK	Mascot		Aceptar
+Slowest	MascotMenu		Muy lento
+unknown option.\n\n	Command line strings		opción desconocida.\n\n
+Ignore this app	MascotMenu		Ignorar esta aplicación
+Ignore this app	Property		Ignorar esta aplicación
+right	MascotMenu		derecha
+About	MascotMenu		Acerca de
+bottom	MascotMenu		abajo
+Usage: Moe [options] [files]\nOptions: [default in brackets after descriptions]\nConfiguration:\n  --help                print this message\nAnimation:\n  --add-anime=ANIME     add anime named ANIME to primary image file\n  --delete-anime=ANIME  delete anime named ANIME from mascot files\n  --wait=WAIT           set anime wait to WAIT\n                        [10]\nFiles:\n  --info                show mascot file information\n\n	Command line strings		Uso: Moe [opciones] [archivos]\nOpciones: [los valores predeterminados están entre corchetes después de las descripciones]\nConfiguración:\n  --help                muestra este mensaje\nAnimacióon:\n  --add-anime=ANIME     añade un anime de nombre ANIME al archivo de imagen primario\n  --delete-anime=ANIME  borra un anime de nombre ANIME de los archivos de mascota\n  --wait=WAIT           establece la espera del anime a WAIT\n                        [10]\nArchivos:\n  --info                muestra información del archivo de mascota\n\n
+Show only on \"%curwin%\" of \"%curappname%\"?	MascotMenu		¿Mostrar solamente en la ventana \"%curwin%\" de \"%curappname%\"?
+overlapping mode specific options.\n\n	Command line strings		opciones específicas del modo superpuesto.\n\n
+Wink	MascotMenu		Pestañeo
+Close	MascotMenu		Cerrar
+Moe is a program to place a cute mascot on the active window.\n	Application About dialog box		Moe es un programa para colocar a una mascota linda sobre la ventana activa.\n
+Okada Jun (programming)	Application About dialog box		Okada Jun (programación)
+Polling	MascotMenu		Sondeo
+Lock Y	MascotMenu		Bloquear Y
+Quit	MascotMenu		Salir
+Very Slow	MascotMenu		Lento
+OK	Property		Aceptar
+Show only on	MascotMenu		Mostrar solamente en
+Slow	MascotMenu		Normal
+top	MascotMenu		arriba
+Lock	MascotMenu	Text when Y is locked.	Bloquear
+This window of this application	MascotMenu		Esta ventana de esta aplicación
+Fast	MascotMenu		Rápido
+Cancel	Mascot		Cancelar
+left	MascotMenu		izquierda
+Fastest	MascotMenu		Muy rápido
+Debug frame visible	MascotMenu		Mostrar marco de depuración
+Remove \"%name%\" from ignore list?	Property		¿Quitar \"%name%\" de la lista de ignorados?

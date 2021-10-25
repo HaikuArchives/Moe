@@ -29,12 +29,14 @@
 #include <getopt.h>
 #include <String.h>
 #include <Application.h>
+#include <AboutWindow.h>
 #include <Roster.h>
 #include <AppFileInfo.h>
 #include <File.h>
 #include <Entry.h>
 #include <Path.h>
 #include <Alert.h>
+#include <Catalog.h>
 #include "MoeDefs.h"
 #include "MoeUtils.h"
 #include "MoeConsole.h"
@@ -43,10 +45,12 @@
 #include "MoeAppUtils.h"
 #include "MoeActiveWindowWatcher.h"
 
+#undef B_TRANSLATION_CONTEXT
+#define B_TRANSLATION_CONTEXT "Command line strings"
 
 static const char *
 sHelp =
-"Usage: Moe [options] [files]\n"
+B_TRANSLATE("Usage: Moe [options] [files]\n"
 "Options: [default in brackets after descriptions]\n"
 "Configuration:\n"
 "  --help                print this message\n"
@@ -57,7 +61,7 @@ sHelp =
 "                        [10]\n"
 "Files:\n"
 "  --info                show mascot file information\n"
-"\n"
+"\n")
 ;
 
 
@@ -141,7 +145,7 @@ MoeApplication::ArgvReceived(int32 argc, char **argv)
 	case 'a':
 	  if (mode != OPEN)
 	    {
-	      MoeConsole::Printf("overlapping mode specific options.\n\n");
+	      MoeConsole::Printf(B_TRANSLATE("overlapping mode specific options.\n\n"));
 	      return;
 	    }
 	  mode = ADD;
@@ -151,7 +155,7 @@ MoeApplication::ArgvReceived(int32 argc, char **argv)
 	case 'd':
 	  if (mode != OPEN)
 	    {
-	      MoeConsole::Printf("overlapping mode specific options.\n\n");
+	      MoeConsole::Printf(B_TRANSLATE("overlapping mode specific options.\n\n"));
 	      return;
 	    }
 	  mode = DELETE;
@@ -161,7 +165,7 @@ MoeApplication::ArgvReceived(int32 argc, char **argv)
 	case 'i':
 	  if (mode != OPEN)
 	    {
-	      MoeConsole::Printf("overlapping mode specific options.\n\n");
+	      MoeConsole::Printf(B_TRANSLATE("overlapping mode specific options.\n\n"));
 	      return;
 	    }
 	  mode = INFO;
@@ -176,7 +180,7 @@ MoeApplication::ArgvReceived(int32 argc, char **argv)
 	  break;
 
 	default:
-	  MoeConsole::Printf("unknown option.\n\n");
+	  MoeConsole::Printf(B_TRANSLATE("unknown option.\n\n"));
 	  return;
 	}
     }
@@ -237,34 +241,36 @@ MoeApplication::ReadyToRun(void)
   MoeActiveWindowWatcher::Watcher()->Run();
 }
 
- 
+#undef B_TRANSLATION_CONTEXT
+#define B_TRANSLATION_CONTEXT "Application About dialog box"
 
 void
 MoeApplication::AboutRequested(void)
 {
-  BString buf;
-  app_info appInfo;
-  BFile file;
-  BAppFileInfo appFileInfo;
-  version_info verInfo;
-
-  this->GetAppInfo(&appInfo);
-  file.SetTo(&appInfo.ref, B_READ_ONLY);
-  appFileInfo.SetTo(&file);
-  appFileInfo.GetVersionInfo(&verInfo, B_APP_VERSION_KIND);
-
-  buf << appInfo.ref.name
-      << verInfo.major << '.'
-      << verInfo.middle << '.'
-      << verInfo.minor
-      << "dabggf"[verInfo.variety] << verInfo.internal << "\n"
-      << verInfo.long_info;
-
-  BAlert *alert = new BAlert("About",
-			     buf.String(),
-			     "Ok");
-  alert->SetFlags(alert->Flags() | B_AVOID_FOCUS);
-  alert->Go(NULL);
+  BAboutWindow* about = new BAboutWindow(B_TRANSLATE_SYSTEM_NAME("Moe"),
+  	MOE_APP_SIGNATURE);
+  const char* authors [] = { /* From documentation files */
+  	B_TRANSLATE("Okada Jun (programming)"),
+  	B_TRANSLATE("Yu-Ki (illustration)"),
+  	"Cafeina",
+  	NULL
+  };
+  const char* extraCopyrights [] = {
+  	"2021 Cafeina",
+  	NULL
+  };
+  const char* thanks [] = { /* From documentation files */
+  	"Toyoshima",
+  	"Yu-Ki",
+  	NULL
+  };
+  
+  about->AddCopyright(2001, "Okada Jun", extraCopyrights);
+  about->AddAuthors(authors);
+  about->AddSpecialThanks(thanks);
+  about->AddExtraInfo(B_TRANSLATE("Project Be Moe.")); /* From resource file */
+  about->AddDescription(B_TRANSLATE("Moe is a program to place a cute mascot on the active window.\n")); /* From resource file */
+  about->Show();
 }
 
 

@@ -36,6 +36,7 @@
 #include <MessageRunner.h>
 #include <Window.h>
 #include <Application.h>
+#include <Catalog.h>
 #include "MoeDefs.h"
 #include "MoeUtils.h"
 #include "MoeSurface.h"
@@ -48,6 +49,8 @@
 #include "MoeMascotMenu.h"
 #include "MoeMascot.h"
 
+#undef B_TRANSLATION_CONTEXT
+#define B_TRANSLATION_CONTEXT "Mascot"
 
 MoeMascot::MoeMascot(const entry_ref &ref, MoeSurface *surface)
   : MoeWindow(ref.name)
@@ -622,10 +625,10 @@ MoeMascot::MessageReceived(BMessage *msg)
 
 	BInvoker *invoker = new BInvoker(execMsg, this);
 
-	BAlert *alert = new BAlert("Set Prefered App",
+	BAlert *alert = new BAlert(B_TRANSLATE("Set preferred app"),
 				   label,
-				   "Ok",
-				   "Cancel",
+				   B_TRANSLATE("OK"),
+				   B_TRANSLATE("Cancel"),
 				   NULL,
 				   B_WIDTH_AS_USUAL,
 				   B_WARNING_ALERT);
@@ -661,10 +664,10 @@ MoeMascot::MessageReceived(BMessage *msg)
 
 	BInvoker *invoker = new BInvoker(execMsg, this);
 
-	BAlert *alert = new BAlert("Set Prefered Win",
+	BAlert *alert = new BAlert(B_TRANSLATE("Set preferred window"),
 				   label,
-				   "Ok",
-				   "Cancel",
+				   B_TRANSLATE("OK"),
+				   B_TRANSLATE("Cancel"),
 				   NULL,
 				   B_WIDTH_AS_USUAL,
 				   B_WARNING_ALERT);

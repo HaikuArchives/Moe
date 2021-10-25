@@ -1,0 +1,46 @@
+1	English	application/x-vnd.Kamnagi.Moe	2411587421
+Redraw	MascotMenu		Redraw
+Side	MascotMenu		Side
+Cancel	Property		Cancel
+Really ignore \"%name%\"?	Property		Really ignore \"%name%\"?
+Show only on \"%curappname%\"?	MascotMenu		Show only on \"%curappname%\"?
+Set preferred window	Mascot		Set preferred window
+Remove from ignore list	MascotMenu		Remove from ignore list
+Set preferred app	Mascot		Set preferred app
+Size	MascotMenu		Size
+Moe	System name		Moe
+This application	MascotMenu		This application
+Project Be Moe.	Application About dialog box		Project Be Moe.
+Lock X	MascotMenu		Lock X
+Yu-Ki (illustration)	Application About dialog box		Yu-Ki (illustration)
+OK	Mascot		OK
+Slowest	MascotMenu		Slowest
+unknown option.\n\n	Command line strings		unknown option.\n\n
+Ignore this app	MascotMenu		Ignore this app
+Ignore this app	Property		Ignore this app
+right	MascotMenu		right
+About	MascotMenu		About
+bottom	MascotMenu		bottom
+Usage: Moe [options] [files]\nOptions: [default in brackets after descriptions]\nConfiguration:\n  --help                print this message\nAnimation:\n  --add-anime=ANIME     add anime named ANIME to primary image file\n  --delete-anime=ANIME  delete anime named ANIME from mascot files\n  --wait=WAIT           set anime wait to WAIT\n                        [10]\nFiles:\n  --info                show mascot file information\n\n	Command line strings		Usage: Moe [options] [files]\nOptions: [default in brackets after descriptions]\nConfiguration:\n  --help                print this message\nAnimation:\n  --add-anime=ANIME     add anime named ANIME to primary image file\n  --delete-anime=ANIME  delete anime named ANIME from mascot files\n  --wait=WAIT           set anime wait to WAIT\n                        [10]\nFiles:\n  --info                show mascot file information\n\n
+Show only on \"%curwin%\" of \"%curappname%\"?	MascotMenu		Show only on \"%curwin%\" of \"%curappname%\"?
+overlapping mode specific options.\n\n	Command line strings		overlapping mode specific options.\n\n
+Wink	MascotMenu		Wink
+Close	MascotMenu		Close
+Moe is a program to place a cute mascot on the active window.\n	Application About dialog box		Moe is a program to place a cute mascot on the active window.\n
+Okada Jun (programming)	Application About dialog box		Okada Jun (programming)
+Polling	MascotMenu		Polling
+Lock Y	MascotMenu		Lock Y
+Quit	MascotMenu		Quit
+Very Slow	MascotMenu		Very Slow
+OK	Property		OK
+Show only on	MascotMenu		Show only on
+Slow	MascotMenu		Slow
+top	MascotMenu		top
+Lock	MascotMenu	Text when Y is locked.	Lock
+This window of this application	MascotMenu		This window of this application
+Fast	MascotMenu		Fast
+Cancel	Mascot		Cancel
+left	MascotMenu		left
+Fastest	MascotMenu		Fastest
+Debug frame visible	MascotMenu		Debug frame visible
+Remove \"%name%\" from ignore list?	Property		Remove \"%name%\" from ignore list?

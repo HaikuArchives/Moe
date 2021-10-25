@@ -10,8 +10,7 @@ resource app_version {
 
 	short_info = "Project Be Moe.",
 	long_info = 
-		"Moe is a program to stay cute mascot on active window.\n"
-		"This kind of program is called  \"Window Sitter\".\n"
+		"Moe is a program to place a cute mascot on the active window.\n"
 };
 
 resource file_types message {

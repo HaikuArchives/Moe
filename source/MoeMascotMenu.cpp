@@ -30,6 +30,7 @@
 #include <Application.h>
 #include <MenuItem.h>
 #include <Message.h>
+#include <Catalog.h>
 #include "MoeDefs.h"
 #include "MoeProperty.h"
 #include "MoeActiveWindowWatcher.h"
@@ -37,15 +38,17 @@
 #include "MoeMascot.h"
 #include "MoeMascotMenu.h"
 
+#undef B_TRANSLATION_CONTEXT
+#define B_TRANSLATION_CONTEXT "MascotMenu"
 
 static const char *
 sSpeed[5] =
 {
-  "Fastest",
-  "Fast",
-  "Slow",
-  "Very Slow",
-  "Slowest",
+  B_TRANSLATE("Fastest"),
+  B_TRANSLATE("Fast"),
+  B_TRANSLATE("Slow"),
+  B_TRANSLATE("Very Slow"),
+  B_TRANSLATE("Slowest"),
 };
 
 
@@ -58,10 +61,10 @@ static const struct
 }
 sSide[4] =
 {
-  { "left",   MOE_TOP_LEFT_BOTTOM_RIGHT, "Lock Y", "Lock X" },
-  { "top",    MOE_LEFT_TOP_RIGHT_BOTTOM, "Lock X", "Lock Y" },
-  { "right",  MOE_TOP_RIGHT_BOTTOM_LEFT, "Lock Y", "Lock X" },
-  { "bottom", MOE_LEFT_BOTTOM_RIGHT_TOP, "Lock X", "Lock Y" },
+  { B_TRANSLATE("left"),   MOE_TOP_LEFT_BOTTOM_RIGHT, B_TRANSLATE("Lock Y"), B_TRANSLATE("Lock X") },
+  { B_TRANSLATE("top"),    MOE_LEFT_TOP_RIGHT_BOTTOM, B_TRANSLATE("Lock X"), B_TRANSLATE("Lock Y") },
+  { B_TRANSLATE("right"),  MOE_TOP_RIGHT_BOTTOM_LEFT, B_TRANSLATE("Lock Y"), B_TRANSLATE("Lock X") },
+  { B_TRANSLATE("bottom"), MOE_LEFT_BOTTOM_RIGHT_TOP, B_TRANSLATE("Lock X"), B_TRANSLATE("Lock Y") },
 };
 
 
@@ -99,7 +102,7 @@ MoeMascotMenu::InitItems(MoeMascot *target, bool advanced)
   this->AddItem(item);
 
   if (! advanced && target->IsYLocked())
-    item->SetLabel("Lock");
+    item->SetLabel(B_TRANSLATE_COMMENT("Lock", "Text when Y is locked."));
   else
     {
       msg = new BMessage(MOE_LOCK_Y);
@@ -111,7 +114,7 @@ MoeMascotMenu::InitItems(MoeMascot *target, bool advanced)
     }
 
   // add size menu.
-  menu = new BMenu("Size");
+  menu = new BMenu(B_TRANSLATE("Size"));
   for (i = 0; i > -4; i--)
     {
       float size = ::pow(2.0, i);
@@ -130,7 +133,7 @@ MoeMascotMenu::InitItems(MoeMascot *target, bool advanced)
   // add side menu.
   if (advanced)
     {
-      menu = new BMenu("Side");
+      menu = new BMenu(B_TRANSLATE("Side"));
       for (i = 0; i < 4; i++)
 	{
 	  msg = new BMessage(MOE_SET_SIDE);
@@ -149,24 +152,26 @@ MoeMascotMenu::InitItems(MoeMascot *target, bool advanced)
     {
       watcher->Lock();
 
-      menu = new BMenu("Show Only on");
+      menu = new BMenu(B_TRANSLATE("Show only on"));
 
       if (target->PrefWin().Length() == 0)
 	{
 	  if (target->PrefApp().Length() == 0)
 	    {
 	      BString label;
-	      label << "Show Only on \"" << watcher->CurrentAppName() << "\"?";
+	      //label << "Show Only on \"" << watcher->CurrentAppName() << "\"?";
+	      label << B_TRANSLATE("Show only on \"%curappname%\"?");
+	      label.ReplaceAll("%curappname%", watcher->CurrentAppName());
 	      msg = new BMessage(MOE_SET_PREF_APP_REQUESTED);
 	      msg->AddString("data", watcher->CurrentApp());
 	      msg->AddString("label", label);
-	      item = new BMenuItem("This Application", msg);
+	      item = new BMenuItem(B_TRANSLATE("This application"), msg);
 	    }
 	  else
 	    {
 	      msg = new BMessage(MOE_SET_PREF_APP);
 	      msg->AddString("data", "");
-	      item = new BMenuItem("This Appliaction", msg);
+	      item = new BMenuItem(B_TRANSLATE("This application"), msg);
 	      item->SetMarked(true);
 	    }
 	  item->SetTarget(target);
@@ -176,20 +181,23 @@ MoeMascotMenu::InitItems(MoeMascot *target, bool advanced)
       if (target->PrefWin().Length() == 0)
 	{
 	  BString label;
-	  label << "Show Only on \"" << watcher->CurrentWin() 
-		<< "\" of \"" << watcher->CurrentAppName() << "\"?";
+	  //label << "Show Only on \"" << watcher->CurrentWin() 
+		//<< "\" of \"" << watcher->CurrentAppName() << "\"?";
+	  label << B_TRANSLATE("Show only on \"%curwin%\" of \"%curappname%\"?");
+	  label.ReplaceAll("%curwin%", watcher->CurrentWin());
+	  label.ReplaceAll("%curappname%", watcher->CurrentAppName());
 	  msg = new BMessage(MOE_SET_PREF_APP_WIN_REQUESTED);
 	  msg->AddString("data", watcher->CurrentApp());
 	  msg->AddString("data", watcher->CurrentWin());
 	  msg->AddString("label", label);
-	  item = new BMenuItem("This Window of This Application", msg);
+	  item = new BMenuItem(B_TRANSLATE("This window of this application"), msg);
 	}
       else
 	{
 	  msg = new BMessage(MOE_SET_PREF_APP_WIN);
 	  msg->AddString("data", "");
 	  msg->AddString("data", "");
-	  item = new BMenuItem("This Window of This Application", msg);
+	  item = new BMenuItem(B_TRANSLATE("This window of this application"), msg);
 	  item->SetMarked(true);
 	}
       item->SetTarget(target);
@@ -202,7 +210,7 @@ MoeMascotMenu::InitItems(MoeMascot *target, bool advanced)
   this->AddSeparatorItem();
 
   // add redraw interval setting menu.
-  menu = new BMenu("Wink");
+  menu = new BMenu(B_TRANSLATE("Wink"));
   for (i = 0; i < 5; i++)
     {
       BString buf;
@@ -218,7 +226,7 @@ MoeMascotMenu::InitItems(MoeMascot *target, bool advanced)
   item = new BMenuItem(menu);
   this->AddItem(item);
 
-  menu = new BMenu("Polling");
+  menu = new BMenu(B_TRANSLATE("Polling"));
   for (i = 0, interval = MOE_FASTEST_POLLING_INTERVAL;
        i < 5;
        i++, interval *= 2)
@@ -233,7 +241,7 @@ MoeMascotMenu::InitItems(MoeMascot *target, bool advanced)
   item = new BMenuItem(menu);
   this->AddItem(item);
 
-  menu = new BMenu("Redraw");
+  menu = new BMenu(B_TRANSLATE("Redraw"));
   for (i = 0, interval = MOE_FASTEST_POLLING_INTERVAL * 2;
        i < 5;
        i++, interval *= 2)
@@ -257,7 +265,7 @@ MoeMascotMenu::InitItems(MoeMascot *target, bool advanced)
   msg->AddString("name", watcher->CurrentAppName());
   msg->AddString("signature", watcher->CurrentApp());
   watcher->Unlock();
-  item = new BMenuItem("Ignore This App", msg);
+  item = new BMenuItem(B_TRANSLATE("Ignore this app"), msg);
   item->SetTarget(property);
   this->AddItem(item);
 
@@ -268,7 +276,7 @@ MoeMascotMenu::InitItems(MoeMascot *target, bool advanced)
 
       property->Lock();
 
-      menu = new BMenu("Avoid from Ignore List");
+      menu = new BMenu(B_TRANSLATE("Remove from ignore list"));
 
       for (i = 1; i < property->CountIgnoreApps(); i++)
 	{
@@ -297,7 +305,7 @@ MoeMascotMenu::InitItems(MoeMascot *target, bool advanced)
     {
       msg = new BMessage(MOE_SET_DEBUG_FRAME_VISIBLE);
       msg->AddBool("data", ! property->IsDebugFrameVisible());
-      item = new BMenuItem("Debug Frame Visible", msg);
+      item = new BMenuItem(B_TRANSLATE("Debug frame visible"), msg);
       item->SetMarked(property->IsDebugFrameVisible());
       item->SetTarget(property);
       this->AddItem(item);
@@ -308,7 +316,7 @@ MoeMascotMenu::InitItems(MoeMascot *target, bool advanced)
   // add close item.
   msg = new BMessage(MOE_MASCOT_QUIT_REQUESTED);
   msg->AddPointer("data", target);
-  item = new BMenuItem("Close", msg);
+  item = new BMenuItem(B_TRANSLATE("Close"), msg);
   item->SetTarget(be_app);
   this->AddItem(item);
 
@@ -316,7 +324,7 @@ MoeMascotMenu::InitItems(MoeMascot *target, bool advanced)
 
   // add about item.
   msg = new BMessage(B_ABOUT_REQUESTED);
-  item = new BMenuItem("About", msg);
+  item = new BMenuItem(B_TRANSLATE("About"), msg);
   item->SetTarget(be_app);
   this->AddItem(item);
 
@@ -324,7 +332,7 @@ MoeMascotMenu::InitItems(MoeMascot *target, bool advanced)
 
   // add quit item.
   msg = new BMessage(B_QUIT_REQUESTED);
-  item = new BMenuItem("Quit", msg);
+  item = new BMenuItem(B_TRANSLATE("Quit"), msg);
   item->SetTarget(be_app);
   this->AddItem(item);
 }

@@ -30,6 +30,7 @@
 #include <Application.h>
 #include <MenuItem.h>
 #include <Message.h>
+#include <StringFormat.h>
 #include <Catalog.h>
 #include "MoeDefs.h"
 #include "MoeProperty.h"
@@ -213,12 +214,15 @@ MoeMascotMenu::InitItems(MoeMascot *target, bool advanced)
   menu = new BMenu(B_TRANSLATE("Wink"));
   for (i = 0; i < 5; i++)
     {
-      BString buf;
-      buf << i + 1 << "s";
+      BString text;
+	  static BStringFormat format(B_TRANSLATE("{0, plural,"
+		"one{# second}"
+		"other{# seconds}}"));
+	  format.Format(text, i + 1);
       interval = (i + 1) * 1000000;
       msg = new BMessage(MOE_SET_WINK_INTERVAL);
       msg->AddInt64("data", interval);
-      item = new BMenuItem(buf.String(), msg);
+      item = new BMenuItem(text.String(), msg);
       item->SetMarked(property->GetWinkInterval() == interval);
       item->SetTarget(property);
       menu->AddItem(item);

@@ -1,4 +1,4 @@
-1	English	application/x-vnd.Kamnagi.Moe	2411587421
+1	English	application/x-vnd.Kamnagi.Moe	85406669
 Redraw	MascotMenu		Redibujado
 Side	MascotMenu		Ubicación
 Cancel	Property		Cancelar
@@ -40,6 +40,7 @@ Lock	MascotMenu	Text when Y is locked.	Bloquear
 This window of this application	MascotMenu		Esta ventana de esta aplicación
 Fast	MascotMenu		Rápido
 Cancel	Mascot		Cancelar
+{0, plural,one{# second}other{# seconds}}	MascotMenu		{0, plural,one{# segundo}other{# segundos}}
 left	MascotMenu		izquierda
 Fastest	MascotMenu		Muy rápido
 Debug frame visible	MascotMenu		Mostrar marco de depuración

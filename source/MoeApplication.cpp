@@ -241,34 +241,31 @@ MoeApplication::ReadyToRun(void)
 }
 
 #undef B_TRANSLATION_CONTEXT
-#define B_TRANSLATION_CONTEXT "Application"
+#define B_TRANSLATION_CONTEXT "Application \"About\" dialog box"
 
 void
 MoeApplication::AboutRequested(void)
 {
-  BString buf;
-  app_info appInfo;
-  BFile file;
-  BAppFileInfo appFileInfo;
-  version_info verInfo;
-
-  this->GetAppInfo(&appInfo);
-  file.SetTo(&appInfo.ref, B_READ_ONLY);
-  appFileInfo.SetTo(&file);
-  appFileInfo.GetVersionInfo(&verInfo, B_APP_VERSION_KIND);
-
-  buf << appInfo.ref.name
-      << verInfo.major << '.'
-      << verInfo.middle << '.'
-      << verInfo.minor
-      << "dabggf"[verInfo.variety] << verInfo.internal << "\n"
-      << verInfo.long_info;
-
-  BAlert *alert = new BAlert(B_TRANSLATE("About"),
-			     buf.String(),
-			     B_TRANSLATE("OK"));
-  alert->SetFlags(alert->Flags() | B_AVOID_FOCUS);
-  alert->Go(NULL);
+  BAboutWindow* about = new BAboutWindow(B_TRANSLATE_SYSTEM_NAME("Moe"),
+  	MOE_APP_SIGNATURE);
+  const char* authors [] = { /* From documentation files */
+  	B_TRANSLATE("Okada Jun (programming)"),
+  	B_TRANSLATE("Yu-Ki (illustration)"),
+  	NULL
+  };
+  const char* thanks [] = { /* From documentation files */
+  	"Toyoshima",
+  	"Yu-Ki",
+  	NULL
+  };
+  
+  about->AddCopyright(2001, "Okada Jun", NULL);
+  about->AddAuthors(authors);
+  about->AddSpecialThanks(thanks);
+  about->AddExtraInfo(B_TRANSLATE("Project Be Moe.")); /* From resource file */
+  about->AddDescription(B_TRANSLATE("Moe is a program to stay cute mascot on active window.\n"
+		"This kind of program is called \"Window Sitter\".\n")); /* From resource file */
+  about->Show();
 }
 
 

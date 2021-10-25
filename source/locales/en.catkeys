@@ -1,21 +1,22 @@
-1	English	application/x-vnd.Kamnagi.Moe	483032066
+1	English	application/x-vnd.Kamnagi.Moe	987817515
 Redraw	MascotMenu		Redraw
 Side	MascotMenu		Side
+Yu-Ki (illustration)	Application		Yu-Ki (illustration)
 Cancel	Property		Cancel
 Really ignore \"%name%\"?	Property		Really ignore \"%name%\"?
 Show only on \"%curappname%\"?	MascotMenu		Show only on \"%curappname%\"?
 Set preferred window	Mascot		Set preferred window
 Remove from ignore list	MascotMenu		Remove from ignore list
-About	Application		About
 Set preferred app	Mascot		Set preferred app
 Size	MascotMenu		Size
+Moe	System name		Moe
 This application	MascotMenu		This application
 Lock X	MascotMenu		Lock X
+Moe is a program to stay cute mascot on active window.\nThis kind of program is called \"Window Sitter\".\n	Application		Moe is a program to stay cute mascot on active window.\nThis kind of program is called \"Window Sitter\".\n
 OK	Mascot		OK
 Slowest	MascotMenu		Slowest
 unknown option.\n\n	Command line strings		unknown option.\n\n
 Ignore this app	MascotMenu		Ignore this app
-OK	Application		OK
 Ignore this app	Property		Ignore this app
 right	MascotMenu		right
 About	MascotMenu		About
@@ -39,5 +40,7 @@ Avoid \"%name%\" from ignore list?	Property		Avoid \"%name%\" from ignore list?
 Fast	MascotMenu		Fast
 Cancel	Mascot		Cancel
 left	MascotMenu		left
+Project Be Moe.	Application		Project Be Moe.
 Fastest	MascotMenu		Fastest
 Debug frame visible	MascotMenu		Debug frame visible
+Okada Jun (programming)	Application		Okada Jun (programming)

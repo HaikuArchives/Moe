@@ -1,7 +1,6 @@
-1	English	application/x-vnd.Kamnagi.Moe	987817515
+1	English	application/x-vnd.Kamnagi.Moe	2411587421
 Redraw	MascotMenu		Redraw
 Side	MascotMenu		Side
-Yu-Ki (illustration)	Application		Yu-Ki (illustration)
 Cancel	Property		Cancel
 Really ignore \"%name%\"?	Property		Really ignore \"%name%\"?
 Show only on \"%curappname%\"?	MascotMenu		Show only on \"%curappname%\"?
@@ -11,8 +10,9 @@ Set preferred app	Mascot		Set preferred app
 Size	MascotMenu		Size
 Moe	System name		Moe
 This application	MascotMenu		This application
+Project Be Moe.	Application About dialog box		Project Be Moe.
 Lock X	MascotMenu		Lock X
-Moe is a program to stay cute mascot on active window.\nThis kind of program is called \"Window Sitter\".\n	Application		Moe is a program to stay cute mascot on active window.\nThis kind of program is called \"Window Sitter\".\n
+Yu-Ki (illustration)	Application About dialog box		Yu-Ki (illustration)
 OK	Mascot		OK
 Slowest	MascotMenu		Slowest
 unknown option.\n\n	Command line strings		unknown option.\n\n
@@ -26,6 +26,8 @@ Show only on \"%curwin%\" of \"%curappname%\"?	MascotMenu		Show only on \"%curwi
 overlapping mode specific options.\n\n	Command line strings		overlapping mode specific options.\n\n
 Wink	MascotMenu		Wink
 Close	MascotMenu		Close
+Moe is a program to place a cute mascot on the active window.\n	Application About dialog box		Moe is a program to place a cute mascot on the active window.\n
+Okada Jun (programming)	Application About dialog box		Okada Jun (programming)
 Polling	MascotMenu		Polling
 Lock Y	MascotMenu		Lock Y
 Quit	MascotMenu		Quit
@@ -36,11 +38,9 @@ Slow	MascotMenu		Slow
 top	MascotMenu		top
 Lock	MascotMenu	Text when Y is locked.	Lock
 This window of this application	MascotMenu		This window of this application
-Avoid \"%name%\" from ignore list?	Property		Avoid \"%name%\" from ignore list?
 Fast	MascotMenu		Fast
 Cancel	Mascot		Cancel
 left	MascotMenu		left
-Project Be Moe.	Application		Project Be Moe.
 Fastest	MascotMenu		Fastest
 Debug frame visible	MascotMenu		Debug frame visible
-Okada Jun (programming)	Application		Okada Jun (programming)
+Remove \"%name%\" from ignore list?	Property		Remove \"%name%\" from ignore list?

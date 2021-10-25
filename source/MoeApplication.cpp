@@ -29,6 +29,7 @@
 #include <getopt.h>
 #include <String.h>
 #include <Application.h>
+#include <AboutWindow.h>
 #include <Roster.h>
 #include <AppFileInfo.h>
 #include <File.h>
@@ -241,7 +242,7 @@ MoeApplication::ReadyToRun(void)
 }
 
 #undef B_TRANSLATION_CONTEXT
-#define B_TRANSLATION_CONTEXT "Application \"About\" dialog box"
+#define B_TRANSLATION_CONTEXT "Application About dialog box"
 
 void
 MoeApplication::AboutRequested(void)
@@ -251,6 +252,11 @@ MoeApplication::AboutRequested(void)
   const char* authors [] = { /* From documentation files */
   	B_TRANSLATE("Okada Jun (programming)"),
   	B_TRANSLATE("Yu-Ki (illustration)"),
+  	"Cafeina",
+  	NULL
+  };
+  const char* extraCopyrights [] = {
+  	"2021 Cafeina",
   	NULL
   };
   const char* thanks [] = { /* From documentation files */
@@ -259,12 +265,11 @@ MoeApplication::AboutRequested(void)
   	NULL
   };
   
-  about->AddCopyright(2001, "Okada Jun", NULL);
+  about->AddCopyright(2001, "Okada Jun", extraCopyrights);
   about->AddAuthors(authors);
   about->AddSpecialThanks(thanks);
   about->AddExtraInfo(B_TRANSLATE("Project Be Moe.")); /* From resource file */
-  about->AddDescription(B_TRANSLATE("Moe is a program to stay cute mascot on active window.\n"
-		"This kind of program is called \"Window Sitter\".\n")); /* From resource file */
+  about->AddDescription(B_TRANSLATE("Moe is a program to place a cute mascot on the active window.\n")); /* From resource file */
   about->Show();
 }
 

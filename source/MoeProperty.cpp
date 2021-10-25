@@ -387,7 +387,7 @@ MoeProperty::MessageReceived(BMessage *msg)
 
 	msg->FindString("name", &name);
 	//buf << "Avoid \"" << name << "\" from Ignore List?";
-	buf << B_TRANSLATE("Avoid \"%name%\" from ignore list?");
+	buf << B_TRANSLATE("Remove \"%name%\" from ignore list?");
 	buf.ReplaceAll("%name%", name);
 
 	BMessage *execMsg = new BMessage(*msg);

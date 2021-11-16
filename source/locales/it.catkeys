@@ -1,0 +1,47 @@
+1	Italian	application/x-vnd.Kamnagi.Moe	85406669
+{0, plural,one{# second}other{# seconds}}	MascotMenu		{0, plural,one{# secondo}other{# secondi}}
+About	MascotMenu		Informazioni
+bottom	MascotMenu		fondo
+Close	MascotMenu		Chiudi
+Debug frame visible	MascotMenu		Debug frame visible
+Fast	MascotMenu		Veloce
+Fastest	MascotMenu		Più veloce
+Ignore this app	MascotMenu		Ignora quest'app
+left	MascotMenu		sinistra
+Lock	MascotMenu	Text when Y is locked.	Blocca
+Lock X	MascotMenu		Blocca X
+Lock Y	MascotMenu		Blocca Y
+Polling	MascotMenu		Aggiornamento
+Quit	MascotMenu		Esci
+Redraw	MascotMenu		Ridisegna
+Remove from ignore list	MascotMenu		Rimuovi dalla lista degli ignorati
+right	MascotMenu		destra
+Show only on	MascotMenu		Mostra solamente su
+Show only on \"%curappname%\"?	MascotMenu		Mostra solamente su \"%curappname%\"?
+Show only on \"%curwin%\" of \"%curappname%\"?	MascotMenu		Mostra solamente su \"%curwin%\" di \"%curappname%\"?
+Side	MascotMenu		Lato
+Size	MascotMenu		Dimensione
+Slow	MascotMenu		Lento
+Slowest	MascotMenu		Più lento
+This application	MascotMenu		Quest'applicazione
+This window of this application	MascotMenu		Questa finestra di questa applicazione
+top	MascotMenu		cima
+Very Slow	MascotMenu		Molto lento
+Wink	MascotMenu		Wink
+Cancel	Property		Annulla
+Ignore this app	Property		Ignora quest'app
+OK	Property		Ok
+Really ignore \"%name%\"?	Property		Vuoi davvero ignorare \"%name%\"?
+Remove \"%name%\" from ignore list?	Property		Vuoi rimuovere \"%name%\" dalla lista degli ignorati?
+Cancel	Mascot		Anulla
+OK	Mascot		Ok
+Set preferred app	Mascot		Imposta app preferita
+Set preferred window	Mascot		Imposta finestra preferita
+Moe	System name		Moe
+Moe is a program to place a cute mascot on the active window.\n	Application About dialog box		Moe è un programma che pone una mascotte carina sulla finestra attiva.\n
+Okada Jun (programming)	Application About dialog box		Okada Jun (programmazione)
+Project Be Moe.	Application About dialog box		Progetto Be Moe.
+Yu-Ki (illustration)	Application About dialog box		Yu-Ki (illustrazione)
+overlapping mode specific options.\n\n	Command line strings		opzioni specifiche modalità sovrapposta.\n\n
+unknown option.\n\n	Command line strings		opzione sconosciuta.\n\n
+Usage: Moe [options] [files]\nOptions: [default in brackets after descriptions]\nConfiguration:\n  --help                print this message\nAnimation:\n  --add-anime=ANIME     add anime named ANIME to primary image file\n  --delete-anime=ANIME  delete anime named ANIME from mascot files\n  --wait=WAIT           set anime wait to WAIT\n                        [10]\nFiles:\n  --info                show mascot file information\n\n	Command line strings		Utilizzo: Moe [opzioni] [file]\nOpzioni: [valore di default tra le parentesi quadre dopo la descrizione]\nConfigurazione:\n  --help                mostra questo messaggio\nAnimazione:\n  --add-anime=ANIME     aggiungi ANIME al file immagine primario\n  --delete-anime=ANIME  elimina ANIME dai file mascotte\n  --wait=ATTESA           imposta ATTESA anime \n                        [10]\nFile:\n  --info                mostra informazioni sul file mascotte\n\n

@@ -1,0 +1,47 @@
+1	Turkish	application/x-vnd.Kamnagi.Moe	85406669
+{0, plural,one{# second}other{# seconds}}	MascotMenu		{0, plural,one{# saniye}other{# saniye}}
+About	MascotMenu		Hakkında
+bottom	MascotMenu		Alt
+Close	MascotMenu		Kapat
+Debug frame visible	MascotMenu		Hata ayıklama çerçevesi görünür
+Fast	MascotMenu		Hızlı
+Fastest	MascotMenu		En hızlı
+Ignore this app	MascotMenu		Bu uygulamayı yok say
+left	MascotMenu		Sol
+Lock	MascotMenu	Text when Y is locked.	Kilit
+Lock X	MascotMenu		X'i kilitle
+Lock Y	MascotMenu		Y'yi kilitle
+Polling	MascotMenu		Sorgulama
+Quit	MascotMenu		Çık
+Redraw	MascotMenu		Yeniden çiz
+Remove from ignore list	MascotMenu		Yok sayılanlar listesinden kaldır
+right	MascotMenu		Sağ
+Show only on	MascotMenu		Yalnızca şurada göster:
+Show only on \"%curappname%\"?	MascotMenu		Yalnızca \"%curappname%\" üzerinde mi gösterilsin?
+Show only on \"%curwin%\" of \"%curappname%\"?	MascotMenu		Yalnızca \"%curappname%\" uygulamasının \"%curwin%\" penceresinde mi gösterilsin?
+Side	MascotMenu		Kenar
+Size	MascotMenu		Boyut
+Slow	MascotMenu		Yavaş
+Slowest	MascotMenu		En yavaş
+This application	MascotMenu		Bu uygulama
+This window of this application	MascotMenu		Bu uygulamanın bu penceresi
+top	MascotMenu		Üst
+Very Slow	MascotMenu		Çok yavaş
+Wink	MascotMenu		Göz kırp
+Cancel	Property		İptal
+Ignore this app	Property		Bu uygulamayı yok say
+OK	Property		Tamam
+Really ignore \"%name%\"?	Property		\"%name%\", gerçekten yok sayılsın mı?
+Remove \"%name%\" from ignore list?	Property		\"%name%\", yok sayılanlar listesinden gerçekten kaldırılsın mı?
+Cancel	Mascot		İptal
+OK	Mascot		Tamam
+Set preferred app	Mascot		Tercih edilen uygulama ayarla
+Set preferred window	Mascot		Tercih edilen pencere ayarla
+Moe	System name		Moe
+Moe is a program to place a cute mascot on the active window.\n	Application About dialog box		Moe, etkin pencerenin üzerine şirin bir maskot yerleştiren bir programdır.\n
+Okada Jun (programming)	Application About dialog box		Okada Jun (programlama)
+Project Be Moe.	Application About dialog box		Be Moe projesi.
+Yu-Ki (illustration)	Application About dialog box		Yu-Ki (görseller)
+overlapping mode specific options.\n\n	Command line strings		üst üste binme kipine özel seçenekler.\n\n
+unknown option.\n\n	Command line strings		bilinmeyen seçenek.\n\n
+Usage: Moe [options] [files]\nOptions: [default in brackets after descriptions]\nConfiguration:\n  --help                print this message\nAnimation:\n  --add-anime=ANIME     add anime named ANIME to primary image file\n  --delete-anime=ANIME  delete anime named ANIME from mascot files\n  --wait=WAIT           set anime wait to WAIT\n                        [10]\nFiles:\n  --info                show mascot file information\n\n	Command line strings		Kullanım: Moe [seçenekler] [dosyalar]\nSeçenekler: [öntanımlı ayarlar açıklamalardan sonra ayraçta]\nYapılandırma:\n  --help                bu iletiyi yazdır\nAnimasyon:\n  --add-anime=ANİME     ANİME adlı animeyi birincil görsel dosyasına ekle\n  --delete-anime=ANİME  ANİME adlı animeyi maskot dosyalarından sil\n  --wait=BEKLE          anime bekleme süresini BEKLE'ye ayarla\nFiles:\n    --info                maskot dosya bilgisini göster\n\n

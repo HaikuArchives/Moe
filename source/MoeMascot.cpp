@@ -420,15 +420,16 @@ MoeMascot::MoveToPrefered(void)
 void
 MoeMascot::Wink(void)
 {
-  BList winkAnimes;
-
   delete mWinkTrigger;
   mWinkTrigger = NULL;
-  BInvoker *reply = new BInvoker(new BMessage(MOE_WINK_DONE), this);
-  this->FindAnimesMatch(&winkAnimes, "WINK");
-  reinterpret_cast<MoeAnime*>
-    (winkAnimes.ItemAt(MoeUtils::Rand(winkAnimes.CountItems())))
-    ->Play(reply);
+  MoeAnime *anime = AnimeAt(MoeUtils::Rand(CountAnimes()));
+  if (anime != NULL)
+    {
+      BInvoker *reply = new BInvoker(new BMessage(MOE_WINK_DONE), this);
+      anime->Play(reply);
+    }
+  else
+    WinkDone();
 }
 
 

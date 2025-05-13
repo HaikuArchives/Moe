@@ -1,0 +1,47 @@
+1	Chinese (traditional)	application/x-vnd.Kamnagi.Moe	85406669
+{0, plural,one{# second}other{# seconds}}	MascotMenu		{0, plural,one{# 秒}other{# 秒}}
+About	MascotMenu		關於
+bottom	MascotMenu		底部
+Close	MascotMenu		關閉
+Debug frame visible	MascotMenu		调试框架可见
+Fast	MascotMenu		快
+Fastest	MascotMenu		最快
+Ignore this app	MascotMenu		忽略此程式
+left	MascotMenu		左
+Lock	MascotMenu	Text when Y is locked.	鎖住
+Lock X	MascotMenu		鎖住 X
+Lock Y	MascotMenu		鎖住 Y
+Polling	MascotMenu		轮询
+Quit	MascotMenu		退出
+Redraw	MascotMenu		重繪
+Remove from ignore list	MascotMenu		从忽略列表中删除
+right	MascotMenu		右
+Show only on	MascotMenu		仅显示于
+Show only on \"%curappname%\"?	MascotMenu		仅显示于 \"%curappname%\"?
+Show only on \"%curwin%\" of \"%curappname%\"?	MascotMenu		仅显示于 \"%curwin%\" of \"%curappname%\"?
+Side	MascotMenu		邊沿
+Size	MascotMenu		大小
+Slow	MascotMenu		慢
+Slowest	MascotMenu		最慢
+This application	MascotMenu		該程式
+This window of this application	MascotMenu		此應用程式的此窗口
+top	MascotMenu		頂部
+Very Slow	MascotMenu		非常慢
+Wink	MascotMenu		眨眼
+Cancel	Property		取消
+Ignore this app	Property		忽略此应用
+OK	Property		确定
+Really ignore \"%name%\"?	Property		确认忽略 \"%name%\"?
+Remove \"%name%\" from ignore list?	Property		从忽略列表中移除 \"%name%\" ?
+Cancel	Mascot		取消
+OK	Mascot		确定
+Set preferred app	Mascot		设置首选应用程序
+Set preferred window	Mascot		设置首选窗口
+Moe	System name		Moe
+Moe is a program to place a cute mascot on the active window.\n	Application About dialog box		Moe是在活动窗口上放置一个可爱的吉祥物的程序。\n
+Okada Jun (programming)	Application About dialog box		Okada Jun (开发)
+Project Be Moe.	Application About dialog box		Project Be Moe.
+Yu-Ki (illustration)	Application About dialog box		Yu-Ki (画师)
+overlapping mode specific options.\n\n	Command line strings		重疊模式特定選項。\n\n
+unknown option.\n\n	Command line strings		不明选项。\n\n
+Usage: Moe [options] [files]\nOptions: [default in brackets after descriptions]\nConfiguration:\n  --help                print this message\nAnimation:\n  --add-anime=ANIME     add anime named ANIME to primary image file\n  --delete-anime=ANIME  delete anime named ANIME from mascot files\n  --wait=WAIT           set anime wait to WAIT\n                        [10]\nFiles:\n  --info                show mascot file information\n\n	Command line strings		用法: Moe [options] [files]\nOptions: [default in brackets after descriptions]\nConfiguration:\n  --help                print this message\nAnimation:\n  --add-anime=ANIME     add anime named ANIME to primary image file\n  --delete-anime=ANIME  delete anime named ANIME from mascot files\n  --wait=WAIT           set anime wait to WAIT\n                        [10]\nFiles:\n  --info                show mascot file information\n\n
